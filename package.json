@@ -1,0 +1,23 @@
+{
+  "name": "nx-parallel-output-bug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "first": "node src/first.js",
+    "second": "node src/second.js",
+    "prereq": "node src/prereq.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-with-stream": "nx run-many --target=first,second --output-style=stream",
+    "start-with-stream-without-prefix": "nx run-many --target=first,second --output-style=stream-without-prefix",
+    "start": "nx run-many --target=first,second"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nx": "15.5.0"
+  },
+  "nx": {
+    "targets": {}
+  }
+}
